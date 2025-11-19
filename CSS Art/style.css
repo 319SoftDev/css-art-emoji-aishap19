@@ -1,0 +1,274 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+:root{
+    --rotate: 22deg;
+}
+.container{
+    display: flex;
+
+    flex-direction: column;
+    width: 100vw;
+    height: 150vh;
+    background-color:  rgb(133, 80, 43);
+    
+}
+
+.box{
+    flex: 1;
+    border: 2px solid black;
+    margin: 10px;
+    background-color: rgb(194, 209, 197);
+    border-radius: 20px;
+
+    align-content: center;
+    text-align: center;
+    padding: 20px;
+}
+.b3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.b2{
+    display: flex;
+    flex-direction: column;
+    
+} 
+.emoji{
+    outline: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.head{
+    position: relative;
+
+    top:-110px;
+    height: 300px;
+    width: 300px;
+    background-image: radial-gradient(
+        #e7e4dd 58%,
+        #c2bfbd 80%
+    );
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 30px 30px 35px rgba(0,0,0,0.25);
+    margin: 20px;
+}
+
+.ears{
+    outline: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    width: 360px;
+}
+
+.ear{
+    height: 200px;
+    width: 100px;
+    background-color: rgb(163, 103, 60);
+    border-radius: 50%;
+    top: 100px;
+    
+}
+
+.left{
+    transform: rotate(var(--rotate));
+    position: relative;
+}
+
+.right{
+   transform: rotate(calc(-1*var(--rotate)));
+   position: relative;
+}
+
+
+
+.eye{
+    height: 60px;
+    width:40px;
+    background-color: black;
+    border-radius: 65%;
+    position: relative;
+    left: 65px;
+    top: 30%;
+}
+
+.cover{
+    height: 120px;
+    width: 100px;
+    background-color: rgb(163, 103, 60);
+    border-radius: 50%;
+    left:167px;
+    position: relative;
+}
+
+.eye2{
+    height: 60px;
+    width:40px;
+    background-color: black;
+    border-radius: 65%;
+    position: relative;
+    left:190px;
+    top: -28%;
+}
+
+
+
+.nose{
+    width: 50px;
+    height: 40px;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 25px solid black;
+    background-color: black;
+    border-radius: 15px 15px 140% 140%;
+    position: relative;
+    left:123px;
+    top: -9%;
+
+}
+
+.mouth{
+    width: 103px;
+    height: 50px;
+    background-color: black;
+    position: relative;
+    top: -6%;
+    left: 32%;
+    border-radius: 50%;
+
+}
+
+.tounge{
+    height: 75px;
+    width: 50px;
+    position: relative;
+    top: -154px;
+    left: -3.2px;
+    border-radius: 0 0   25px 25px;
+    background-image: radial-gradient(
+        #F39BBf 10%,
+        #D15656 95%
+    );
+}
+
+.emoji:hover > .tounge{
+    opacity: 0;
+}
+
+.parallelogram {
+	width: 100px;
+	height: 50px;
+	transform: skew(20deg);
+	background: #c08383;
+    position: relative;
+    left: 500px;
+    transition: width 2s;
+    top: 50px;
+}
+
+.parallelogram:hover {
+  width: 300px;
+}
+
+.triangle{
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid #D15656;
+    position: relative;
+    left: 900px;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.triangle:hover{
+    width: 200px;
+    height: 300px;
+    background-color: #D15656;
+    transform: rotate(180deg);
+}
+
+.circle{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(236, 134, 108);
+    border-radius: 50%;
+    position: relative;
+    left: 1200px;
+    top:-50px;
+    transition: width 2s, height 4s, background-color 3s;
+}
+
+.circle:hover{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(133, 209, 70);
+}
+
+.pink{
+    width: 100px;
+    height: 100px;
+    background-color: #F39BBf;
+    animation-name: myAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+@keyframes myAnimation {
+  0%   {background-color:rgb(226, 149, 149); left:0px; top:0px;}
+  25%  {background-color:rgb(172, 57, 85); left:200px; top:0px;}
+  50%  {background-color:rgb(79, 79, 167); left:200px; top:150px;}
+  75%  {background-color:rgb(142, 30, 146); left:0px; top:150px;}
+  100% {background-color:rgb(255, 72, 173); left:0px; top:0px;}
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: #6b8dc0;
+    position: relative;
+    animation: mybox 1s linear 0s infinite forwards;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    left: 870px;
+    top: -60px;
+}
+
+@keyframes mybox{
+    form{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.square2{
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+    position: relative;
+    left: 1500px;
+    top: -160px;
+    animation-name: myBox2;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+#square2{ animation-timing-function: linear;}
+@keyframes myBox2{
+    from{left:1200px;}
+    to{left: 1700px;}
+    
+}
